@@ -7,7 +7,7 @@
 
 Web-приложение для расчета скоринга клиентов, написанное на фреймворке Laravel. Скоринг - это число равное сумме баллов по определенным правилам расчета.
 
-"[Тестовое задание](https://disk.yandex.ru/i/UR7s3hIlXexN0g) от компании [Sveak](https://sveak.com/).
+[Тестовое задание](https://disk.yandex.ru/i/UR7s3hIlXexN0g) от компании [Sveak](https://sveak.com/).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
