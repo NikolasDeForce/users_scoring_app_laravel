@@ -9,8 +9,6 @@ Web-приложение для расчета скоринга клиентов
 
 [Тестовое задание](https://disk.yandex.ru/i/UR7s3hIlXexN0g) от компании [Sveak](https://sveak.com/).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
 ## Как запустить
 
 Для начала `git clone https://github.com/NikolasDeForce/users_scoring_app_laravel`. Далее, убедитесь что у вас стоят все нужные утилиты. А именно: Composer&Laravel, npm, vite и MySQL.
