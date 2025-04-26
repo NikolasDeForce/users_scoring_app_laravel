@@ -10,7 +10,7 @@ class User extends Model
     use HasFactory;
     protected $guarded = false;
 
-    public function scoring(User $user) {
+    static public function scoring(array $user) {
         $score = 0;
         //Считаем скоринг по первым 3 цифрам номера телефона
         $megaphone_nums = array('920', '921', '922', '923', '924', '925', '926', '927', '928', '929');
@@ -80,10 +80,12 @@ class User extends Model
         }
 
         //Считаем скоринг по галочке
-        if (isset($user["is_accept_data"])) {
-            $score += 4;
-        } else {
+        if (!isset($user["is_accept_data"])) {
             $score += 0;
+        } else {
+            $score += 4;
         }
+
+        return $score;
     }
 }
