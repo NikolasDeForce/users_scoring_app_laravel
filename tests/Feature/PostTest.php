@@ -83,4 +83,27 @@ class PostTest extends TestCase
         $this->assertNotEquals($user['is_accept_data'], $user_updated['is_accept_data']);
         $this->assertNotEquals($user['scoring'], $user_updated['scoring']);
     }
+
+    public function test_the_create_and_delete_user() {
+        $this->withoutExceptionHandling();
+
+        $data = [
+            "id"=>1,
+            "first_name"=> "Николай",
+            "last_name"=> "Притыкин",
+            "phone"=> "+79520057016",
+            "email"=> "nikolay.pritykin@mail.ru",
+            "education"=> "Среднее образование",
+            "is_accept_data"=> "false",
+            "scoring"=> "16",
+        ];
+
+        $res = $this->post(route("users.store"), $data);
+
+        $this->assertDatabaseCount("users",1);
+
+        $res = $this->delete(route("users.destroy", $data['id']), $data);
+
+        $this->assertDatabaseCount("users",0);
+    }
 }
